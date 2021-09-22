@@ -216,8 +216,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1374078756}
   - component: {fileID: 1374078755}
-  - component: {fileID: 1374078754}
   - component: {fileID: 1374078753}
+  - component: {fileID: 1374078757}
+  - component: {fileID: 1374078758}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -244,24 +245,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1374078754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374078752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 563d413dddc31434eac3ebd252e82a81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  Projectile: {fileID: 1389750144194456864, guid: e87d0fc218be4314185f4bd647865dd6, type: 3}
-  projectileSpeed: 650
-  nextFire: 0
-  fireRate: 0.5
-  lifeTime: 2.5
 --- !u!212 &1374078755
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -327,3 +310,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1374078757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374078752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a3cbb0262c15842830e638f8085b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  rb: {fileID: 1374078758}
+  animator: {fileID: 1374078753}
+  Projectile: {fileID: 1389750144194456864, guid: e87d0fc218be4314185f4bd647865dd6, type: 3}
+  projectileSpeed: 650
+  nextFire: 0
+  fireRate: 0.5
+  lifeTime: 2.5
+--- !u!50 &1374078758
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374078752}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
