@@ -8,6 +8,7 @@ public class Shooting : MonoBehaviour
     public GameObject projectile;
 
     public float projectileForce = 20f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +27,6 @@ public class Shooting : MonoBehaviour
     {
         GameObject bullet =  Instantiate(projectile, firepoint.position, firepoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(firepoint.up * projectileForce, ForceMode2D.Impulse);
     }
 }
